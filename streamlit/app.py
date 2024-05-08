@@ -15,10 +15,16 @@ except KeyError:
 
 
 
+@st.cache_resource
+def model_load():
+    llm = ChatOllama(temperature=0.0, model=model_name)
+    memory = ConversationBufferMemory()
+    chain = ConversationChain(llm=llm, memory=memory, verbose=True)
+    return chain
+
+
 model_name = "llama3:latest"
-llm = ChatOllama(temperature=0.0, model=model_name)
-memory = ConversationBufferMemory()
-chain = ConversationChain(llm=llm, memory=memory, verbose=True)
+chain = model_load()
 
 
 def task(distinct_id, input, output, event="llm-task", timestamp=None, session_id=None, properties=None):
