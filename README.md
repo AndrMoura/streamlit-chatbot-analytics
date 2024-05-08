@@ -1,6 +1,6 @@
 # Streamlit Chatbot Application
 
-This repository contains a Streamlit-based chatbot application that leverages the Ollama with the Langchain library and integrates [PostHog-LLM](https://github.com/postlang/posthog-llm) for analytics and monitoring. 
+This repository contains a Streamlit-based chatbot application that leverages Ollama with Langchain library and integrates [PostHog-LLM](https://github.com/postlang/posthog-llm) for analytics and monitoring. 
 
 ![My Animation](img/Animation.gif)
 
